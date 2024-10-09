@@ -7,9 +7,6 @@ function descendingOrder(n){
     numArray.sort((a, b) => b - a);
     let answer = numArray.join('');
     return Number(answer);
-
-    
-
   }
 let x = 1234
 descendingOrder(x)
