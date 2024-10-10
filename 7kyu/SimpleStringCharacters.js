@@ -17,16 +17,18 @@ function solve(s){
     sArray = Array.from(s)
 
     sArray.forEach(e => {
-        if(e == e.toUpperCase() && e != Number(e)){
-            upper += 1
+        if(/[^A-Za-z0-9]/.test(e)){
+            spec += 1
         }else if(e == e.toLowerCase() && e != Number(e)){
             lower += 1
         }else if(e == Number(e)){
             nums += 1
-        }else{
-            spec += 1
+        }else if (e == e.toUpperCase() && e != Number(e)){
+            upper += 1
         }
     });
+
+    
 
     return [upper,lower,nums,spec]
 
@@ -35,4 +37,4 @@ function solve(s){
 
 
    
-   console.log(solve('CCCCcccc1'))
+   console.log(solve('CCCCcccc1!@@@@'))
