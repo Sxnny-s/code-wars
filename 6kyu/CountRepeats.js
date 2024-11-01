@@ -25,7 +25,7 @@ function countRepeats(str) {
 
 
 
-let x = 'abbcca'
+let x = 'abbccs'
 console.log(countRepeats(x))
 
 
