@@ -18,4 +18,43 @@
 // The first element 120 is the total weight of team 1, and the second element 140 is the total weight of team 2.
 
 
-e
+function rowWeights(array){
+    //your code here
+    const team1 = []
+    const team2 = []
+
+    array.forEach((e,i) => {
+        
+        let index = i + 1
+        index
+        if(index % 2 === 0){
+            team2.push(e)
+        }else{
+            team1.push(e)
+        }
+        
+        let answer = []
+    });
+    
+   let t2 = team2.reduce((a,c)=> {
+    return a+c
+    },0)
+
+    let t1 = team1.reduce((a,c)=> {
+        return a+c
+        },0)
+    
+
+   let answer = []
+
+   answer.push(t1)
+   answer.push(t2)
+
+
+   return answer
+    
+  }
+
+  let x = [50,60,70,80]
+    //   [120,140]
+  console.log(rowWeights(x))
