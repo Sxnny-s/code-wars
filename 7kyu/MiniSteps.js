@@ -18,40 +18,56 @@
 
 // Now the result is greater or equal to 6 , Hence the output is (2) i.e (2) operations are required to do this .
 
+// function minimumSteps(numbers, value){
+//     //your code here
+//     numbers.sort((a,b)=> a - b)
+//     let count = 0
+//     // const total = numbers.reduce((a,c) => {
+
+//     //     return a + c
+
+
+//     // },0)
+
+//     let sum = 0
+//     console.log(numbers)
+//     for(let i = 0; i < numbers.length; i++){
+//         console.log({sum})
+
+
+//         if(sum < value){
+            
+//             sum += numbers[i]
+
+//             if(i !== 0){
+
+//                 count += 1
+//                 console.log({count})
+//             }
+
+//         }        
+//     }
+    
+//     return count  
+//   }
+
 function minimumSteps(numbers, value){
     //your code here
     numbers.sort((a,b)=> a - b)
     let count = 0
-    // const total = numbers.reduce((a,c) => {
-
-    //     return a + c
-
-
-    // },0)
-
     let sum = 0
-    console.log(numbers)
-    for(let i = 0; i < numbers.length; i++){
-        console.log({sum})
 
+    let x = numbers.reduce((a,c) => {
+        if(a < value){
+            count++
 
-        if(sum < value){
-            
-            sum += numbers[i]
+        }
+        return a + c
+    })
 
-            if(i !== 0){
+    return  count
 
-                count += 1
-                console.log({count})
-            }
-
-        }        
-    }
-    
-    return count  
   }
-
-
 
 
   const x = [3,3,4,5,7,8,9,10,22,31,49,50,68,98,99]
@@ -61,5 +77,3 @@ function minimumSteps(numbers, value){
 //   answer == 11
 
 
-console.log({y})
-console.log({y}.y)
