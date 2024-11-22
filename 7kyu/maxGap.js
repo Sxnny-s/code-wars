@@ -2,7 +2,7 @@
 // Given an array/list [] of integers , Find The maximum difference between the successive elements in its sorted form.
 
 // Notes
-// Array/list size is at least 3 .
+// Array/list size is at least 3 .const
 
 // Array/list's numbers Will be mixture of positives and negatives also zeros_
 
@@ -17,12 +17,27 @@
 
 function maxGap (numbers){
     //your code here
-    numbers.sort((a,b) => a-b)
+    numbers.sort((a,b) => a - b)
+    const possibleAnswers = []
 
     numbers
 
-    
+    for(let i = 0; i < numbers.length - 1; i++){
+        let first = i
+        
+        let second = i + 1
+        
 
+        let difference = numbers[second] - numbers[first]
+        
+        possibleAnswers.push(difference)
+        
+
+    }
+
+    possibleAnswers
+    let answer = Math.max(...possibleAnswers)
+    return answer
   }
 
 
