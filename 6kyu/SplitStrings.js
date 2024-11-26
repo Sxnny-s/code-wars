@@ -9,15 +9,23 @@
 function solution(str){
 
     let sections = []
-    for (let i = 0; i < str/2; i++) {
-        
-        
-        
+
+    if(str.length % 2 === 0){
+        for (let i = 0; i < str.length; i += 2) {
+            sections.push(str.slice(i,i + 2))
+        }
+        return sections
+    }else{
+        str = str + '_'
+        for (let i = 0; i < str.length; i += 2) {
+            sections.push(str.slice(i,i + 2))
+        }
+        return sections
     }
    
 }
 
 
 
-const x = 'abcdef'
+const x = 'abcde'
 console.log(solution(x))
