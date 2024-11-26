@@ -18,12 +18,51 @@
 // I have created other katas. Have a look if you like coding and challenges.
 
 function getLengthOfMissingArray(arrayOfArrays) {
+    
+    if (arrayOfArrays === null){
+        return 0
+    }
+    if(arrayOfArrays.includes(null)){
+        return 0
+    }
+    
+
+
+    if (!Array.isArray(arrayOfArrays) || arrayOfArrays.length === 0 || arrayOfArrays.some(arr => arr === null || arr.length === 0)) {
+        return 0;
+    }
+
+    arrayOfArrays.sort((a,b)=> a.length - b.length)
+
     arrayOfArrays
+    let consecutive = []
+    let missing = []
+
+
+    arrayOfArrays.forEach(e => {
+       consecutive.push(e.length)
+    });
+
+    consecutive
+
+    consecutive.forEach((e,i,arr) => {
+        e
+        if(e + 1 !== arr[i + 1] && e !== arr[arr.length - 1]){
+            missing.push(e + 1)
+        }
+    })
+
+    if(consecutive.includes(0)){
+        return 0
+    }
+
+   return Number(missing.join(''))
+
   }
   
 
 
 
-  const x = [ [ 1, 2 ], [ 4, 5, 1, 1 ], [ 1 ], [ 5, 6, 7, 8, 9 ]]
+  const x = [[1, 2], null, [1, 2, 3]]
 
   console.log(getLengthOfMissingArray(x))
