@@ -24,7 +24,14 @@
 function extraPerfect(n){
     //your code here
     
+    let answer = []
+    for (let i = 1; i <= n; i += 2) {
+        answer.push(i)
+        
+    }
+
+    return answer
   }
 
 
-  console.log(extraPerfect(3))
+  console.log(extraPerfect(39))
