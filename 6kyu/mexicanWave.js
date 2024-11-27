@@ -9,11 +9,33 @@
 
 function wave(str){
     // Code here
-    str
+    let arr = str.split('')
+    let answer = []
+
+    for (let i = 0; i < arr.length; i++) {
+        let wave = []
+        if (str[i] === ' ') continue; 
+        
+       arr.forEach((e,j,arr) => {
+              if(j === i){
+                e
+                wave.push(e.toUpperCase())
+            }else{
+
+                wave.push(e)
+            }
+            
+        
+       });
+       answer.push(wave.join(''))
+
+    }
     
+    return answer
   }
 
 
 
-  const x = 'hello'
+  const x = "he he"
+//   answer ["Codewars", "cOdewars", "coDewars", "codEwars", "codeWars", "codewArs", "codewaRs", "codewarS"]
   console.log(wave(x))
