@@ -10,6 +10,7 @@
 function wave(str){
     // Code here
     str
+    
   }
 
 
