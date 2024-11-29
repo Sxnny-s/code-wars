@@ -16,8 +16,19 @@
 function dataReverse(data) {
     // Your code here
     data
+    let bytes = []
+    
+    for (let i = 0; i < data.length; i += 8) {
+       let byte = data.slice(i, i + 8)
+       byte
+       bytes.push(byte)  
+    }
+
+   let revered = bytes.reverse()
+   let merged = revered.flat(1)
+   merged
 
   }
 
-  const x = [1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]
+  const x = [1,1,1,1,1,1,1,1,4,4,4,4,4,4,4,4]
   console.log(dataReverse(x))
