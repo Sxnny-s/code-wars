@@ -5,8 +5,9 @@ function sumDigNthTerm(initval, patternl, nthterm) {
     // your code
     let answers = [initval]
     let num = initval
+    
     for(let i = 0; i < nthterm / patternl.length; i++){
-        
+        i
         for(let i = 0; i < patternl.length; i++){
         
             num += patternl[i]
