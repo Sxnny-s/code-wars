@@ -15,11 +15,13 @@ function solve(arr){
    let counts = Object.entries(frequency)
    counts
    counts.sort((a,b) => b[1] - a[1])
-  
+   counts
+
     counts.forEach(e => {
-        e
+        
         for (let i = 0; i < e[1]; i++) {
-            answer.push(Number(e[0]))
+            // answer.push(Number(e[0]))
+            answer.push((e[0]))
         }
     })
 
@@ -30,6 +32,6 @@ function solve(arr){
 
 
 
-  const x = [4,9,5,0,7,3,8,4,9,0]
-// answer  [3,3,3,5,5,7,7,2,9]
+  const x = ['z','z','a','a',9,8,8,2,2,7,7,6,6,1,1,6]
+// answer
   console.log(solve(x))
